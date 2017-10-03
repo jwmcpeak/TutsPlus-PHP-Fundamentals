@@ -1,0 +1,24 @@
+Create
+INSERT INTO glossary_terms (term, definition) 
+VALUES ('css', 'cascading style sheets')
+
+INSERT INTO glossary_terms (term, definition) 
+VALUES ('js', 'javascript')
+
+INSERT INTO glossary_terms (term, definition) 
+VALUES ('json', 'javascript object notation')
+
+Read
+SELECT definition FROM glossary_terms
+SELECT * FROM glossary_terms
+SELECT * FROM glossary_terms WHERE id > 1
+SELECT * FROM glossary_terms WHERE id > 1 ORDER BY ID DESC
+
+Update
+UPDATE glossary_terms
+set term = 'css', definition = 'hello, world'
+where id = 1
+
+Delete
+DELETE FROM glossary_terms
+where id = 4
