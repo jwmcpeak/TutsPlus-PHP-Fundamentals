@@ -1,4 +1,6 @@
-<?php //namespace App\Data;
+<?php
+
+require('glossaryterm.class.php');
 
 function get_terms() {
     $json = get_data();
@@ -36,12 +38,7 @@ function search_terms($search) {
 function add_term($term, $definition) {
     $items = get_terms();
 
-    $obj = (object) [
-        'term' => $term,
-        'definition' => $definition
-    ];
-
-    $items[] = $obj;
+    $items[] = new GlossaryTerm($term, $definition);
 
     set_data($items);
 }
